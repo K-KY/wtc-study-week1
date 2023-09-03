@@ -1,5 +1,8 @@
 package onboarding;
 
+import onboarding.problem1.CompareMax;
+import onboarding.problem1.validator.Validate;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +34,13 @@ pobi와 crong에는 [왼쪽 페이지 번호, 오른쪽 페이지 번호]가 순
 class Problem1 {
     public static int solution(List<Integer> pobi, List<Integer> crong) {
         int answer = Integer.MAX_VALUE;
+        answer = new Validate().validate(pobi, crong);
+        if (answer != -1) {
+            CompareMax compareMax = new CompareMax();
+            int p = compareMax.compare(pobi);
+            int c = compareMax.compare(crong);
+            answer = compareMax.compareResult(p, c);
+        }
 
         return answer;
     }
