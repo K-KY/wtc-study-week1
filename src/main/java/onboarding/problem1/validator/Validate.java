@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Validate {
-    public  Validate(List<Integer> pobi, List<Integer> crong) {
-        validate(pobi, crong);
+    public Validate() {
     }
-    public void validate(List<Integer> pobi, List<Integer> crong){
+    public int validate(List<Integer> pobi, List<Integer> crong){
         try{
             List<Integer> page = numPolar(pobi, crong);
             numberContinuity(page);
         }catch (Exception e) {
-            System.out.println(e.getMessage());
+            return -1;
         }
+        return Integer.MAX_VALUE;
     }
 
     public  List<Integer> numPolar(List<Integer> pobi, List<Integer> crong) {
