@@ -3,11 +3,12 @@ package onboarding.problem1;
 import java.util.List;
 
 public class CompareMax {
-    public void compare(List<Integer> page) {
+    public int compare(List<Integer> page) {
         int max = 0;
         for (int i = 0; i < page.size(); i++) {
             max = Math.max(numberAssemble(page.get(i).toString().split("")), max);
         }
+        return max;
     }
 
     public int numberAssemble(String[] n) {
