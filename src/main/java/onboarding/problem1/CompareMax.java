@@ -19,4 +19,15 @@ public class CompareMax {
         }
         return Math.max(mul, sum);
     }
+
+    public int compareResult(int p, int c) {
+        if (p > c) {
+            return 1;
+        }
+        if (p < c) {
+            return 2;
+        }
+        return 0;
+    }
+
 }
