@@ -5,12 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SlidingWindow {
-    public List<String> sliding(String[] psw) {
+    public String sliding(String[] psw) {
         List<String> result =new ArrayList<>(Arrays.asList(psw));
         for (int i = 0; i < result.size(); i++) {
             i = compare(i, result);
         }
-        return result;
+        return result.toString().replace(", ", "");
     }
     public int compare(int i, List<String> psw) {
         int index = i;
