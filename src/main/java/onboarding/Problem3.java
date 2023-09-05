@@ -7,6 +7,7 @@ import java.util.List;
 public class Problem3 {
     public static int solution(int number) {
         int answer = 0;
+
         return answer;
     }
     static int counter(List<String> lst) {
@@ -18,6 +19,13 @@ public class Problem3 {
             }
         }
         return cnt;
+    }
+
+
+    static List<String> changeToList(int number) {
+        String[] s = String.valueOf(number).split("");
+        List<String> num = new ArrayList<>(Arrays.asList(s));
+        return num;
     }
 
 }
