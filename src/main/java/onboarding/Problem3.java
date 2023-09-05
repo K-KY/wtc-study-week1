@@ -6,26 +6,31 @@ import java.util.List;
 
 public class Problem3 {
     public static int solution(int number) {
-        int answer = 0;
-
+        int answer = starter(number);
         return answer;
     }
     static int counter(List<String> lst) {
-        int cnt = 0;
+        int count = 0;
         for (int i = 0; i < lst.size(); i++) {
             int n = Integer.parseInt(lst.get(i));
-            if (n % 3 == 0) {
-                cnt++;
+            if (n % 3 == 0 && n != 0) {
+                count++;
             }
         }
-        return cnt;
+        return count;
     }
 
+    static int starter(int number) {
+        int count = 0;
+        for (int i = 1; i <= number; i++) {
+            count += counter(changeToList(i));
+        }
+        return count;
+    }
 
     static List<String> changeToList(int number) {
         String[] s = String.valueOf(number).split("");
-        List<String> num = new ArrayList<>(Arrays.asList(s));
-        return num;
+        return new ArrayList<>(Arrays.asList(s));
     }
 
 }
