@@ -41,7 +41,7 @@ class Problem1 {
             int c = compareMax.compare(crong);
             answer = compareMax.compareResult(p, c);
         }
-
+        .
         return answer;
     }
 
