@@ -3,7 +3,6 @@ package onboarding;
 import onboarding.problem1.CompareMax;
 import onboarding.problem1.validator.Validate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /*
