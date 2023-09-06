@@ -1,6 +1,9 @@
 package onboarding;
 
 import onboarding.problem1.CompareMax;
+import onboarding.problem1.Crong;
+import onboarding.problem1.Player;
+import onboarding.problem1.Pobi;
 import onboarding.problem1.validator.Validate;
 
 import java.util.List;
@@ -36,11 +39,10 @@ class Problem1 {
         answer = new Validate().validate(pobi, crong);
         if (answer != -1) {
             CompareMax compareMax = new CompareMax();
-            int p = compareMax.compare(pobi);
-            int c = compareMax.compare(crong);
+            Pobi p = (Pobi) compareMax.compare(new Pobi(pobi));
+            Crong c = (Crong) compareMax.compare(new Crong(crong));
             answer = compareMax.compareResult(p, c);
         }
-
         return answer;
     }
 
