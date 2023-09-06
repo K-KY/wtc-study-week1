@@ -3,6 +3,14 @@ package onboarding.problem1;
 import java.util.List;
 
 public class CompareMax {
+    public Player compare(Player player) {
+        int max = 0;
+        for (int i = 0; i < player.getPage().size(); i++) {
+            max = Math.max(numberAssemble(player.getPage().get(i).toString().split("")), max);
+        }
+        player.setScore(max);
+        return player;
+    }
     public int compare(List<Integer> page) {
         int max = 0;
         for (int i = 0; i < page.size(); i++) {
@@ -28,6 +36,16 @@ public class CompareMax {
         if (p < c) {
             return 2;
         }
+        return 0;
+    }
+    public int compareResult(Pobi p, Crong c) {
+        if (p.getScore() > c.getScore()) {
+            return p.getId();
+        }
+        if (p.getScore() < c.getScore()) {
+            return c.getId();
+        }
+
         return 0;
     }
 
