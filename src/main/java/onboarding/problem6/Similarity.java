@@ -6,6 +6,14 @@ import java.util.List;
 
 public class Similarity {
     List<String> emails = new ArrayList<>();
+    public List<String> similarityCheck(List<List<String>> forms) {
+        for (int i = 0; i < forms.size(); i++) {
+            String crewName = forms.get(i).get(1);
+            String[] windows = new SlidingWindow().window(crewName);
+            finder(forms, windows);
+        }
+        return emails;
+    }
 
     private void finder(List<List<String>> form, String[] windows) {
         for (int i = 0; i < form.size(); i++) {
