@@ -7,7 +7,24 @@ import java.util.*;
 
 public class RecommendFriends {
     Map<String, Integer> score = new TreeMap<>();
+    String user;
+    public RecommendFriends(String user) {
+        this.user = user;
+    }
 
+    public Map<String, Integer> recommend(List<String> visitor, HashMap<String, List<String>> friendsMap) {
+        for (int i = 0; i < visitor.size(); i++) {
+            String key = visitor.get(i);
+            if (friendsMap.get(key) == null) {
+                isNotFriend(key, friendsMap);
+            }
+            if (friendsMap.get(key) != null) {
+                isFriend(friendsMap.get(key));
+            }
+        }
+        score.remove(user);
+        return score;
+    }
 
     private void isNotFriend(String key, HashMap<String, List<String>> friendsMap) {
         boolean[] booleans ={false};
