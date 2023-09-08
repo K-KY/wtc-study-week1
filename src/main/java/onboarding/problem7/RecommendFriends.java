@@ -21,4 +21,10 @@ public class RecommendFriends {
             score.put(key, score.getOrDefault(key, 0) + 1);
         }
     }
+    private void isFriend(List<String> friends) {
+        friends.forEach(v -> {
+            score.put(v, score.getOrDefault(v, 0) + 10);
+        });
+    }
+
 }
