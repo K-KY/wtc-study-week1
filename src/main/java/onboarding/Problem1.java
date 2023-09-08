@@ -36,9 +36,12 @@ pobi와 crong에는 [왼쪽 페이지 번호, 오른쪽 페이지 번호]가 순
 class Problem1 {
     public static int solution(List<Integer> pobi, List<Integer> crong) {
         int answer = Integer.MAX_VALUE;
+        //숫자를 검증한다.
         answer = new Validate().validate(pobi, crong);
+        //검증 단계에서 리턴한게 -1이 아니라면
         if (answer != -1) {
             CompareMax compareMax = new CompareMax();
+            //Pobi 클래스를 파라미터로 넣는다. compare에서 리턴하는게 Player타입이므로 Pobi로 캐스팅
             Pobi p = (Pobi) compareMax.compare(new Pobi(pobi));
             Crong c = (Crong) compareMax.compare(new Crong(crong));
             answer = compareMax.compareResult(p, c);
