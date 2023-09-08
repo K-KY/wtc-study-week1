@@ -44,4 +44,10 @@ public class RecommendFriends {
         });
     }
 
+    public List<String> sortKey() {
+        List<String> keySet = new ArrayList<>(score.keySet());
+        keySet.sort((o1, o2) -> score.get(o2).compareTo(score.get(o1)));
+        System.out.println(keySet);
+        return keySet;
+    }
 }
