@@ -10,6 +10,7 @@ public class RecommendFriends {
     String user;
     public RecommendFriends(String user) {
         this.user = user;
+
     }
 
     public Map<String, Integer> recommend(List<String> visitor, HashMap<String, List<String>> friendsMap) {
