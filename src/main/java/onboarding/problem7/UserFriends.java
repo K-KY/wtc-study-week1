@@ -8,8 +8,9 @@ public class UserFriends {
     HashMap<String, List<String>> friendMap = new HashMap<>();
     public HashMap<String, List<String>> findFriends(String user, List<List<String>> friends) {
         for (int i = 0; i < friends.size(); i++) {
-            if (friends.get(i).get(1).equals(user)) {
-                makeFriendList(friends.get(i).get(0), friends);
+            String friend = friends.get(i).get(1);
+            if (friend.equals(user)) {
+                makeFriendList(friend, friends);
             }
         }
         return friendMap;
