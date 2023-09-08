@@ -11,6 +11,7 @@ public class Problem6 {
         Similarity s = new Similarity();
         answer = s.similarityCheck(forms);
         Collections.sort(answer);
+        //정렬 후 리턴
         return answer;
     }
 }
