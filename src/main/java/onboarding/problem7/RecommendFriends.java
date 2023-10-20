@@ -41,6 +41,7 @@ public class RecommendFriends {
         });
         //boolean이 false 면 친구의 친구도 아님 + 1점
         if (!booleans[0]) {
+
             score.put(key, score.getOrDefault(key, 0) + 1);
         }
     }
