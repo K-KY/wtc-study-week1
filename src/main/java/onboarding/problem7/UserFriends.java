@@ -10,7 +10,7 @@ public class UserFriends {
         for (int i = 0; i < friends.size(); i++) {
             String friend = friends.get(i).get(1);
             if (friend.equals(user)) {
-                //user와 친구인 사람을 찾는다
+                //user와 친구인 사람을 찾는다.
                 makeFriendList(friends.get(i).get(0), friends);
             }
         }
